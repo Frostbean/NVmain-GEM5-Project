@@ -1070,11 +1070,7 @@ BaseCache::access(PacketPtr pkt, CacheBlk *&blk, Cycles &lat,
         satisfyRequest(pkt, blk);
         maintainClusivity(pkt->fromCache(), blk);
 
-	if (blk->isWritable()) {
-		PacketPtr writeclean_pkt = writecleanBlk(blk, pkt->req->getDest(), pkt->id);
-		writebacks.push_back(writeclean_pkt);}
-        return true;
-    }
+	# if (blk->isWritable()) {PacketPtr writeclean_pkt = writecleanBlk(blk, pkt->req->getDest(), pkt->id);writebacks.push_back(writeclean_pkt);}return true;}
 
     // Can't satisfy access normally... either no block (blk == nullptr)
     // or have block but need writable
