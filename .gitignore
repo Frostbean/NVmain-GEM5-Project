@@ -1,0 +1,17 @@
+.ICEauthority
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.config/
+.local/
+.mozilla/
+.pki/
+.profile
+.sudo_as_admin_successful
+.viminfo
+.vscode/
+Downloads/
+snap/
+.vim/
+NVmain/
